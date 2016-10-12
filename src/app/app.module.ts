@@ -7,12 +7,15 @@ import {AppComponent} from './app.component';
 import {routing} from "./app.routing";
 import {AboutComponent} from "./components/about.component";
 import {SearchComponent} from "./components/search.component";
+import {SpotifyService} from "./services/spotify.service";
+import {ArtistComponent} from "./components/artist.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         SearchComponent,
-        AboutComponent
+        AboutComponent,
+        ArtistComponent
     ],
     imports: [
         BrowserModule,
@@ -20,7 +23,7 @@ import {SearchComponent} from "./components/search.component";
         HttpModule,
         routing
     ],
-    providers: [],
+    providers: [SpotifyService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
