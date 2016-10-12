@@ -8,4 +8,7 @@
 src/app/**/*.js
 src/app/**/*.js.map
 src/favicon.ico
+src/assets/css/
+src/assets/fonts
+
 
