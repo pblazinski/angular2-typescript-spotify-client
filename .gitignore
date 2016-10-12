@@ -1,0 +1,11 @@
+.idea/
+/dist/
+/node_modules/
+/e2e/
+/database.rules.json
+/firebase.json
+/.firebaserc
+src/app/**/*.js
+src/app/**/*.js.map
+src/favicon.ico
+
