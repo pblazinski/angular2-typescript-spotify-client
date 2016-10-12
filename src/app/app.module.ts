@@ -9,13 +9,17 @@ import {AboutComponent} from "./components/about.component";
 import {SearchComponent} from "./components/search.component";
 import {SpotifyService} from "./services/spotify.service";
 import {ArtistComponent} from "./components/artist.component";
+import {AlbumComponent} from "./components/album.component";
+import {MsToMinPipe} from "./msToMin.pipe";
 
 @NgModule({
     declarations: [
         AppComponent,
         SearchComponent,
         AboutComponent,
-        ArtistComponent
+        ArtistComponent,
+        AlbumComponent,
+        MsToMinPipe
     ],
     imports: [
         BrowserModule,

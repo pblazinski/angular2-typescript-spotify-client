@@ -23,8 +23,8 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">
-                            <a routerLink="/artist/{{result.id}}"> {{result.name}} </a>
+                        <span class="card-title activator ">
+                            <a class="grey-text text-darken-4" routerLink="/artist/{{result.id}}"> {{result.name}}  </a>
                         </span>
                         <br>
                         <div *ngIf="result.genres.length>0">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <a routerLink="/artist/{{result.id}}">Go to artist</a>
+                        <a  class="grey-text text-darken-4" routerLink="/artist/{{result.id}}">Go to artist</a>
                     </div>
 
                 </div>

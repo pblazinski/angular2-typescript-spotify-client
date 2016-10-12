@@ -40,7 +40,7 @@
         <div class="col s12 m4 l3" *ngFor="let album of albums" style="max-height: 320px; weight: auto;">
             <div class="card">
                 <div class="card-image">
-                    <a href="#">
+                    <a routerLink="/albums/{{album.id}}">
                         <img class="responsive-img" src="{{album.images[1].url}}" *ngIf="album.images.length > 0"
                              style="max-height: 200px;">
                     </a>
@@ -48,7 +48,7 @@
                 <div class="card-content">
                     <div class="card-content">
 
-                        <a href="#" class="center">
+                        <a  routerLink="/albums/{{album.id}}" class="center grey-text text-darken-4">
                             <p *ngIf="album.name.length > 20">{{album.name.substr(0,19) + "..."}}</p>
                             <p *ngIf="album.name.length <= 20">{{album.name}}</p>
                         </a>

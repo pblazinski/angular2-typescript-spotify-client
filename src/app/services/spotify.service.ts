@@ -25,4 +25,14 @@ export class SpotifyService {
         return this.http.get("https://api.spotify.com/v1/artists/" + id + "/albums")
             .map(res=> res.json());
     }
+
+    getAlbum(id: string) {
+        return this.http.get("https://api.spotify.com/v1/albums/" + id )
+            .map(res=> res.json());
+    }
+
+    getAlbumTracks(id: string) {
+        return this.http.get("https://api.spotify.com/v1/albums/" + id + "/tracks" )
+            .map(res=> res.json());
+    }
 }
