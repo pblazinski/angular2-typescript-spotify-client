@@ -1,0 +1,50 @@
+<div class="row">
+
+</div>
+
+<div class="row">
+    <div class="input-field col s12">
+        <i class="material-icons prefix">search</i>
+        <input id="search" type="text" class="validate" [(ngModel)]="query" (keyup)="search()">
+        <label for="search">Search artist...</label>
+
+    </div>
+</div>
+
+
+<div *ngFor="let result of searchResult">
+    <div class="row">
+
+        <div *ngIf="result.images.length > 0" class="col s12 m12 124">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img *ngIf="result.images.length > 0" src="{{result.images[2].url}}" alt=""
+                         style="width: 200px; height: auto;"/>
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">
+                            <a href="#"> {{result.name}} </a>
+                        </span>
+                        <br>
+                        <div *ngIf="result.genres.length>0">
+                            <strong>Genres: </strong>
+                            <span *ngFor="let item of result.genres">{{item}} </span>
+
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Go to artist</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
