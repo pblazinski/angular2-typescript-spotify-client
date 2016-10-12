@@ -16,7 +16,7 @@ import {Album} from "../models/Album";
 export class ArtistComponent implements OnInit {
 
     id: string;
-    artist: Artist[];
+    artist: Artist;
     albums: Album[];
 
     constructor(private spotifyService: SpotifyService,
@@ -30,6 +30,13 @@ export class ArtistComponent implements OnInit {
                 this.spotifyService.getArtist(id)
                     .subscribe(artist=> {
                         this.artist = artist;
+                        console.log(this.artist);
+                    })
+
+                this.spotifyService.getAlbums(id)
+                    .subscribe(albums=> {
+                        this.albums = albums.items;
+                        console.log(this.albums);
                     })
             })
     }
